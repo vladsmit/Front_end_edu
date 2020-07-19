@@ -1,0 +1,262 @@
+body {
+    margin: 0;
+    font-family: arial;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1280px;
+}
+
+.main-header {
+    min-height: 323px;
+    width: 100%;
+    background-color: #445161;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.main-header:after {
+    content: "";
+    width: 100%;
+    display: block;
+    clear: both;
+}
+
+.main-header-wrapper {
+    float: left;
+}
+
+.main-header-title {
+    display: block;
+    font-size: 60px;
+    line-height: 1;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0 0 40px 0;
+}
+
+.main-header-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 0 36px;
+}
+
+.main-header-list-item {
+    font-size: 20px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #ffffff;
+    position: relative;
+}
+
+.main-header-list-item:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: -33px;
+    width: 25px;
+    height: 19px;
+    background-image: url('../img/check_icon.png');
+    background-size: cover;
+}
+
+.main-header-product-media {
+    float: right;
+    display: block;
+    background-color: #fff;
+}
+
+.product-info {
+    width: 100%;
+    min-height: 359px;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 50px;
+}
+
+.product-info:after {
+    content: "";
+    width: 100%;
+    display: block;
+    clear: both;
+}
+
+.product-info-wrapper {
+    float: left;
+    width: 653px;
+}
+
+.product-info-title {
+    display: block;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #445161;
+    margin: 0 0 28px 0;
+}
+
+.product-info-desc {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #333333;
+    margin: 16px 0 0 0;
+    hyphens: auto;
+}
+
+.product-info-photo {
+    display: block;
+    float: right;
+    background-color: #445161;
+}
+
+.product-advantages {
+    min-height: 417px;
+    width: 100%;
+    background-color: #e9e9e9;
+    box-sizing: border-box;
+    padding: 50px;
+}
+
+.product-advantages:after {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.product-advantages-title {
+    display: block;
+    margin: 0 0 29px 0;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #445161;
+    text-align: center;
+}
+
+.product-advantages-list1 {
+    float: left;
+    list-style-type: none;
+    margin: 0 0 0 41px;
+    padding: 0;
+}
+
+.product-advantages-list-item {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #333333;
+    width: 527px;
+    margin: 0 0 32px 0;
+    hyphens: auto;
+    position: relative;
+}
+
+.product-advantages-list-item:last-child {
+    margin: 0;
+}
+
+.product-advantages-list-item:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: -40px;
+    width: 32px;
+    height: 32px;
+    background-color: #445161;
+}
+
+.product-advantages-list-item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 11px;
+    left: -34px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/plus.png);
+}
+
+.product-advantages-list2 {
+    float: right;
+    list-style-type: none;
+    margin: 0 22px 0 0;;
+    padding: 0;
+}
+
+.screenshots {
+    width: 100%;
+    min-height: 486px;
+    padding: 50px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.screenshots:after {
+    content: "";
+    width: 100%;
+    display: block;
+    clear: both;
+}
+
+.screenshots-title {
+    display: block;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #445161;
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+.screenshots-wrapper {
+    width: 1164px;
+}
+
+.screenshots-block {
+    float: left;
+    width: 574px;
+    margin: 0 0 28px 0;
+}
+
+.screenshots-block:nth-child(odd) {
+    margin: 0 16px 0 0;    
+}
+
+.screenshots-block:nth-last-child(-n+2) {
+    margin-bottom: 0;    
+}
+
+.screenshots-photo {
+    display: block;
+    background-color: #445161;
+    float: left;
+}
+
+.screenshots-info {
+    float: left;
+    width: 360px;
+    margin: -5px 0 0 14px;
+}
+
+.screenshots-info-title {
+    display: block;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #445161;
+    margin: 0 0 8px 0;
+}
+
+.screenshots-info-desc {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #333333;
+    margin: 0;
+    hyphens: auto;
+}
