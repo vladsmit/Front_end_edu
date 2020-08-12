@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+<script>
+	function sum(x, y) {
+		return x + y;
+	}
+
+	function diff(x, y) {
+		return x - y;
+	}
+
+	function product(x, y) {
+		return x * y;
+	}
+
+	function divide(x, y) {
+		return x / y;
+	}
+
+	function mathOperation(arg1, arg2, operation) {
+		switch(operation) {
+			case "+":
+				return sum(arg1, arg2);
+			case "-":
+				return diff(arg1, arg2);
+			case "*":
+				return product(arg1, arg2);
+			case "/":
+				return divide(arg1, arg2);
+		}
+	}
+
+	alert(mathOperation(5, 3, "+"));
+	alert(mathOperation(5, 3, "-"));
+	alert(mathOperation(5, 3, "*"));
+	alert(mathOperation(5, 3, "/"));
+</script>
