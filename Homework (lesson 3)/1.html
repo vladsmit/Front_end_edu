@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<script>
+	var i = 0, n;
+
+	while (i <= 100) {
+		n = 1;
+		if (i == 0 || i == 1) {
+			i++;
+			continue;
+		}
+		while (i >= n) {
+			if (n == 1 || Number.isInteger(i / n) == false) {
+				n++;
+			}
+			else if (n == i) {
+				document.write(i + " ");
+				break;
+			}
+			else {
+				break;
+			}
+		}	
+		i++;
+	}
+</script>

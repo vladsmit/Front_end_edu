@@ -1,0 +1,13 @@
+<meta charset="utf-8">
+<script>
+	var total = 0;
+	for (var i = 0; i < 5; i++) {
+		num1 = (Math.random() * 9 + 1).toFixed(0);
+		num2 = (Math.random() * 9 + 1).toFixed(0);
+		answer = +prompt("Сколько будет " + num1 + " * " + num2 + "?");
+		if (answer == num1 * num2) {
+			total = total + 1;
+		}
+	}
+	alert("Оценка за экзамен - " + total);
+</script>

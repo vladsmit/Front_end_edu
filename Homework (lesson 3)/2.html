@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<script>
+	var answer, good, count, total = 0, i = 0;
+	while (true) {
+		answer = prompt("Есть ли у вас в корзине товары? (да/нет)").toLowerCase();
+		if (answer == "да") {
+			good = +prompt("Какая стоимость " + (i + 1) + " товара в корзине?");
+			count = +prompt("Какое количество " + (i + 1) + " товара в корзине?");
+			good *= count;
+			total += good;
+			i++;
+		}
+		else {
+			document.write("Общее количество товаров: " + i + "<br>Общая сумма товаров в корзине: " + total);
+			break;
+		}
+	}
+</script>
