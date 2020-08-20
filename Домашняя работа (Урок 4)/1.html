@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+<script>
+	function number(num) {
+		var obj = {}, arr;
+		if (num >= 0 && num <= 999) {
+			num += "";
+			arr = num.split('');
+			arr.reverse();
+			if (arr.length > 2) {
+				obj.единицы = arr[0];
+				obj.десятки = arr[1];
+				obj.сотни = arr[2];
+			}
+			else if (arr.length > 1) {
+				obj.единицы = arr[0];
+				obj.десятки = arr[1];
+			}
+			else {
+				obj.единицы = arr[0];
+				}
+			return console.log(obj);
+		}
+		else if (num > 999) {
+			return console.log("Число превышает допустимое значение \n" + obj);
+		}
+	}
+
+	number(295);
+	number(36);
+	number(8);
+	number(1000);
+</script>
