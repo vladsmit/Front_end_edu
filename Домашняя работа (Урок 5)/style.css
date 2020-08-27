@@ -1,0 +1,72 @@
+.tableChess {
+	width: 500px;
+	height: 500px;
+	margin: 0;
+	padding: 0;
+	border-spacing: 0 0;
+}
+
+.rowChess:nth-child(2) > .cellChess:nth-child(2n+3), .rowChess:nth-child(3) > .cellChess:nth-child(even), .rowChess:nth-child(4) > .cellChess:nth-child(2n+3), .rowChess:nth-child(5) > .cellChess:nth-child(even), .rowChess:nth-child(6) > .cellChess:nth-child(2n+3), .rowChess:nth-child(7) > .cellChess:nth-child(even), .rowChess:nth-child(8) > .cellChess:nth-child(2n+3), .rowChess:nth-child(9) > .cellChess:nth-child(even) {
+    background-color: brown;
+}
+
+.rowChess:nth-child(3) > .cellChess:last-child, .rowChess:nth-child(5) > .cellChess:last-child, .rowChess:nth-child(7) > .cellChess:last-child, .rowChess:nth-child(9) > .cellChess:last-child {
+    background-color: #fff;
+}
+
+.cellChess {
+	border: 1px solid black;
+	text-align: center;
+	vertical-align: center;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    background-color: blanchedalmond;
+    font-size: 2em;
+}
+
+.cellBorderTop {
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    padding-bottom: 20px;
+    transform: rotate(180deg);
+    background-color: #fff;
+    font-size: 1.2em;
+}
+
+.cellBorderTop:first-child, .cellBorderTop:last-child {
+    border-top: 0;
+}
+
+.cellBorderBottom {
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    padding-bottom: 20px;
+    background-color: #fff;
+    font-size: 1.2em;
+}
+
+.cellBorderBottom:first-child, .cellBorderBottom:last-child {
+    border-top: 0;
+}
+
+.cellBorderLeft {
+    border-bottom: 0;
+    border-left: 0;
+    border-top: 0;
+    padding-left: 20px;
+    background-color: #fff;
+    font-size: 1.2em;
+}
+
+.cellBorderRight {
+    border-bottom: 0;
+    border-top: 0;
+    border-left: 0;
+    padding-left: 20px;
+    transform: rotate(180deg);
+    background-color: #fff;
+    font-size: 1.2em;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Шахматная доска</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<script>
+		var table = document.createElement("table");
+		table.className = "tableChess";
+		var tr = "";
+		var td = "";
+		var letters = ["A", "B", "C", "D", "E", "F", "G", "H"];
+		letters.reverse();
+		document.querySelector("body").append(table);
+		for (var i = 0; i < 10; i++) {
+			tr = document.createElement("tr");
+			tr.className = "rowChess";
+			if (i == 0) {
+				for (var n = 0; n < 10; n++) {
+					td = document.createElement("td");
+					td.className = "cellChess cellBorderTop";
+					if (n > 0 && n < 9) {
+						td.insertAdjacentHTML("beforeEnd", letters[n-1]);
+					}
+					tr.appendChild(td);
+				}
+			}
+			else if (i == 9) {
+				for (var n = 0; n < 10; n++) {
+					td = document.createElement("td");
+					td.className = "cellChess cellBorderBottom";
+					if (n > 0 && n < 9) {
+						td.insertAdjacentHTML("beforeEnd", letters[n-1]);
+					}
+					tr.appendChild(td);
+				}
+			}
+			else {
+				for (var n = 0; n < 10; n++) {
+					if (n == 0) {
+						td = document.createElement("td");
+						td.className = "cellChess cellBorderLeft";
+						if (i > 0 && i < 9) {
+							td.insertAdjacentHTML("beforeEnd", i);
+						}
+						tr.appendChild(td);
+					}
+					else if (n == 9) {
+						td = document.createElement("td");
+						td.className = "cellChess cellBorderRight";
+						if (i > 0 && i < 9) {
+							td.insertAdjacentHTML("beforeEnd", i);
+						}
+						tr.appendChild(td);
+					}
+					else {
+						td = document.createElement("td");
+						td.className = "cellChess";
+						//td.insertAdjacentHTML("afterBegin", "&#9817;");
+						tr.appendChild(td);
+					}
+				}
+			}
+			table.appendChild(tr);
+		}
+
+		rows = document.querySelectorAll("tr");
+		cells = document.querySelectorAll("td");
+		for (var i = 1; i < 9; i++) {
+			rows[2].cells[i].insertAdjacentHTML("afterBegin", "&#9817;");
+		}
+		for (var i = 1; i < 9; i++) {
+			rows[7].cells[i].insertAdjacentHTML("afterBegin", "&#9823;");
+		}
+		rows[1].cells[1].insertAdjacentHTML("afterBegin", "&#9814;");
+		rows[1].cells[8].insertAdjacentHTML("afterBegin", "&#9814;");
+		rows[8].cells[1].insertAdjacentHTML("afterBegin", "&#9820;");
+		rows[8].cells[8].insertAdjacentHTML("afterBegin", "&#9820;");
+		rows[1].cells[2].insertAdjacentHTML("afterBegin", "&#9816;");
+		rows[1].cells[7].insertAdjacentHTML("afterBegin", "&#9816;");
+		rows[8].cells[2].insertAdjacentHTML("afterBegin", "&#9822;");
+		rows[8].cells[7].insertAdjacentHTML("afterBegin", "&#9822;");
+		rows[1].cells[3].insertAdjacentHTML("afterBegin", "&#9815;");
+		rows[1].cells[6].insertAdjacentHTML("afterBegin", "&#9815;");
+		rows[8].cells[3].insertAdjacentHTML("afterBegin", "&#9821;");
+		rows[8].cells[6].insertAdjacentHTML("afterBegin", "&#9821;");
+		rows[1].cells[4].insertAdjacentHTML("afterBegin", "&#9813;");
+		rows[1].cells[5].insertAdjacentHTML("afterBegin", "&#9812;");
+		rows[8].cells[4].insertAdjacentHTML("afterBegin", "&#9819;");
+		rows[8].cells[5].insertAdjacentHTML("afterBegin", "&#9818;");
+	</script>
+</body>
+</html>
