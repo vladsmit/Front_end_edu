@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Фотогалерея</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<script>
+        function picture(e) {
+            switch (e.target) {
+                case smallArr[0]:
+                    mainImage.src = bigArr[0];
+                    break;
+                case smallArr[1]:
+                    mainImage.src = bigArr[1];
+                    break;
+                case smallArr[2]:
+                    mainImage.src = bigArr[2];
+                    break;
+            }
+        }
+        function fail() {
+            alert("Картинка не найдена!");
+            mainImage.alt = "Зима в лесу";
+        }
+		var bigDiv = document.createElement("div"),
+		wrapDiv = document.createElement("div"),
+        mainImage = document.createElement("img"),
+        bigArr = [],
+        smallArr = [];
+        mainImage.onerror = fail;
+		bigDiv.className = "bigPicBlock";
+		wrapDiv.className = "wrapBlock";
+		document.querySelector("body").append(wrapDiv);
+        document.querySelector("body").append(bigDiv);
+        document.querySelectorAll("div")[1].appendChild(mainImage);
+        for (var i = 0; i < 3; i++) {
+			var smallImg = document.createElement("img");
+            smallImg.width = 256;
+            smallImg.height = 192;
+            smallImg.src = "img_small/small_" + (i+1) + ".jpg";
+            smallImg.onclick = picture;
+			wrapDiv.appendChild(smallImg);
+            smallArr.push(smallImg);
+		}
+        for (var i = 0; i < 3; i++) {
+            var srcImg = "img_big/big_" + (i+1) + ".jpg";
+            bigArr.push(srcImg);
+        }
+	</script>
+</body>
+</html>

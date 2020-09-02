@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+}
+
+.mainWrap {
+    margin: 0 auto;
+    padding: 50px 0;
+    box-sizing: border-box;
+    width: 1000px;
+}
+
+.basket {
+    width: 100%;
+    min-height: 150px;
+    margin: 0;
+    padding: 30px;
+    box-sizing: border-box;
+    border: 2px solid darkred;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightgray;
+}
+
+.wrapDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 350px;
+    margin: 50px 0 0;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    min-height: 350px;
+    border: 2px solid darkred;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.image {
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid lightgray;
+}
+
+.name {
+    margin: 20px 0;
+    font-size: 1em;
+    color: darkred;
+}
+
+.price {
+    margin: 0 0 30px;
+    font-size: 1.5em;
+    color: darkcyan;
+}
+
+.button {
+    width: 100px;
+    height: 30px;
+    background-color: darkred;
+    color: lightgray;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid lightgray;
+    border-radius: 15px; 
+    text-transform: uppercase;
+    font: 400 1em Helvetica, sans-serif;
+    letter-spacing: 3px;
+    transition: ease-out 400ms;
+}
+
+.button:hover {
+    background-color: darkcyan;
+    color: lightgray;
+}
+
+.button:active {
+    background-color: lightgray;
+    color: darkcyan;
+}
+
+.basketStr {
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    list-style-type: none;
+    min-height: 62px;
+}
+
+#x_0 {
+    width: 250px;
+    margin: 0;
+}
+
+#x_1 {
+    width: 50px;
+    margin: 0 50px;
+}
+
+#x_2 {
+    width: 100px;
+    margin: 0 100px 0 0;
+}
+
+.sum {
+    width: 300px;
+    margin: auto;
+    line-height: 60px;
+    font-size: 3em;
+    color: darkred;
+    text-align: center;
+}
+
+.basketTitle {
+    text-align: center;
+    color: darkred;
+}
+
+#y_0 {
+    width: 250px;
+    margin: 0;
+}
+
+#y_1 {
+    width: 50px;
+    margin: 0 50px;
+}
+
+#y_2 {
+    width: 100px;
+    margin: 0;
+}
+
+#y_3 {
+    width: 300px;
+    margin: 0 0 0 115px;
+    text-align: center;
+}

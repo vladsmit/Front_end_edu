@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 40px 0 0 0;
+}
+
+.mainWrap {
+    margin: 0 auto;
+    width: 512px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageWrap {
+    margin: 0 60px 30px;
+    border: 1px solid black;
+    width: 512px;
+    height: 384px;
+}
+
+.image {
+    width: 512px;
+    height: 384px;
+}
+
+.arrow0 {
+    background-image: url(../img/arrow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    transform: rotate(180deg);
+}
+
+.arrow1 {
+    background-image: url(../img/arrow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+}
+

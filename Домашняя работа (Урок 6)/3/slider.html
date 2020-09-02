@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Слайдер</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <script>
+        function picture(e) {
+            switch (e.target) {
+                case arrowArr[1]:
+                    if (n < 3) {
+                        mainImage.src = picArr[n+1];
+                        n++; 
+                    }
+                    else if (n == 3) {
+                        n = 0;
+                        mainImage.src = picArr[n];    
+                    }
+                    break;
+                case arrowArr[0]:
+                    if (n > 0) {
+                        mainImage.src = picArr[n-1];
+                        n--;
+                    }
+                    else if (n == 0) {
+                        n = 3;
+                        mainImage.src = picArr[n];    
+                    }
+                    break;
+            }
+        }
+        var wrapDiv = document.createElement("div"),
+        wrapImageDiv = document.createElement("div"),
+        mainImage = document.createElement("img"),
+        arrowArr = [],
+        picArr = [],
+        n = 0;
+        wrapDiv.className = "mainWrap";
+        wrapImageDiv.className = "imageWrap";
+        mainImage.className = "image";
+        document.querySelector("body").append(wrapDiv);
+        document.querySelector("div").append(wrapImageDiv);
+        document.querySelectorAll("div")[1].append(mainImage);
+        for (var i = 0; i < 2; i++) {
+            var arrow = document.createElement("p");
+            arrow.className = "arrow" + i;
+            arrow.onclick = picture;
+            wrapDiv.insertBefore(arrow, wrapDiv.children[2]);
+            arrowArr.push(arrow);
+        }
+        for (var i = 0; i < 4; i++) {
+            var pic = "img/" + (i+1) + ".jpg";
+            picArr.push(pic);
+        }
+        mainImage.src = picArr[0];
+    </script>
+</body>
+</html>
