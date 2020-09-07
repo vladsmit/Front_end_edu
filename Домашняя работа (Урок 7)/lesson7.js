@@ -262,11 +262,11 @@ function createBomb() { //создание бомбы на карте
     }
     // счетчик для бомбы, по истченеию которого, бомба пропадает
     var t = 4;
-    var tm = setInterval(function() {
+    bomb_timer = setInterval(function() {
         bomb_cell.innerHTML = t;
         t--;
         if (t < 0) {
-            clearInterval(tm);
+            clearInterval(bomb_timer);
             bomb_cell.innerHTML = "";
             classes = bomb_cell.getAttribute("class").split(" ");
             bomb_cell.setAttribute("class", classes[0] + ' ' + classes[1]);
