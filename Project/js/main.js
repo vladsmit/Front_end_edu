@@ -1,8 +1,8 @@
 const products = [
-    {id: 1, title: 'Notebook', price: 2000, image: '../img/заглушка.jpg'},
-    {id: 2, title: 'Mouse', price: 20, image: '../img/заглушка.jpg'},
-    {id: 3, title: 'Keyboard', price: 200, image: '../img/заглушка.jpg'},
-    {id: 4, title: 'Gamepad', price: 50, image: '../img/заглушка.jpg'}
+    {id: 1, title: 'Notebook', price: 2000, image: 'img/заглушка.jpg'},
+    {id: 2, title: 'Mouse', price: 20, image: 'img/заглушка.jpg'},
+    {id: 3, title: 'Keyboard', price: 200, image: 'img/заглушка.jpg'},
+    {id: 4, title: 'Gamepad', price: 50, image: 'img/заглушка.jpg'}
 ];
 //Функция для формирования верстки каждого товара
 const renderProduct = (product) => {
