@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Бургеры</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        Выбери свой бургер:
+        <form class="burgerMenu" name="burgerForm">
+            <label class="labelSmall" for="small">
+                <input type="radio" id="small" name="burger">
+            </label>
+            <label class="labelBig" for="big">
+                <input type="radio" id="big" name="burger">
+            </label>
+        </form>
+        Начинки (выбери от 1 до 3):
+        <form class="toppingMenu" name="toppingForm">
+            <label class="labelCheese" for="a">
+                <input type="checkbox" id="a">
+            </label>
+            <label class="labelSalad" for="b">
+                <input type="checkbox" id="b">
+            </label>
+            <label class="labelPotato" for="c">
+                <input type="checkbox" id="c">
+            </label>
+        </form>
+        Добавки по желанию:
+        <form class="addMenu" name="addForm">
+            <label class="labelSpice" for="1">
+                <input type="checkbox" id="1">
+            </label>
+            <label class="labelMayo" for="2">
+                <input type="checkbox" id="2">
+            </label>
+        </form>
+        Ваш заказ:
+        <div class="finalCount">
+            <p class="finalBurger"></p>
+            <p class="finalStuff"></p>
+            <p class="finalTop"></p>
+            <p class="finalPrice"></p>
+            <p class="finalCal"></p>
+            <button class="buy-btn">Купить</button>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

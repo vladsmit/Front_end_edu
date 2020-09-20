@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 20px;
+    width: 390px;
+    background-color: bisque;
+}
+
+.burgerMenu {
+    border: 1px solid black;
+    width: 388px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.toppingMenu {
+    border: 1px solid black;
+    width: 388px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.addMenu {
+    border: 1px solid black;
+    width: 388px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.finalCount {
+    width: 100%;
+    min-height: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.finalBurger {
+    margin-top: 0;
+    color: chocolate;
+}
+
+.finalStuff {
+    margin-top: 0;
+    color: chocolate;
+}
+
+.finalTop {
+    margin-top: 0;
+    color: chocolate;
+}
+
+.finalPrice {
+    margin-top: 0;
+    color: darkred;
+}
+
+.finalCal {
+    margin-top: 0;
+    color: darkred;
+}
+
+.buy-btn {
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid gray;
+    border-radius: 10px;
+    background-color: bisque;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+.buy-btn:hover {
+    background-color: darkred;
+    color: #fff;
+}
+
+.buy-btn:active {
+    background-color: #fff;
+    color: darkred;
+}
