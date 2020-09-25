@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="form" name="feedbackForm" action="#">
+        <fieldset class="fb">
+            <legend>Форма обратной связи</legend>
+            <label class="labelName" for="name">
+                Ваше имя:
+                <input class="name" type="text" id="name" placeholder="Введите имя...">
+            </label>
+            <label class="labelTel" for="tel">
+                Ваш телефон:
+                <input class="tel" type="tel" id="tel" placeholder="Введите номер...">
+            </label>
+            <label class="labelMail" for="email">
+                Ваш e-mail:
+                <input class="mail" type="email" id="email" placeholder="Введите адрес...">
+            </label>
+            <label for="text">
+                <textarea class="text" name="text" id="text" cols="50" rows="10" placeholder="Введите текст..."></textarea>
+            </label>
+            <input class="button" type="submit" value="отправить">
+        </fieldset>
+    </form>
+    <script>
+        window.onload = () => {
+            const button = document.querySelector(".button").addEventListener("click", e => {
+                e.preventDefault();
+                let name = document.querySelector(".name");
+                let tel = document.querySelector(".tel");
+                let mail = document.querySelector(".mail");
+                let nameStr = /^[a-zа-яА-ЯёЁ]+$/i;
+                let telStr = /^\+7\(\d{3}\)\d{3}-\d{4}$/;
+                let mailStr = /^[a-z.-_0-9]+@[a-z0-9_-]+\.[a-zа-я]{2,4}$/iu;
+                if(name.value.search(nameStr) == -1) {
+                    error("Используйте только буквы", ".labelName", name);
+                }
+                if(tel.value.search(telStr) == -1) {
+                    error("+7(ххх)ххх-хххх", ".labelTel", tel);
+                }
+                if(mail.value.search(mailStr) == -1) {
+                    error("Используйте формат: _@_._", ".labelMail", mail);
+                }
+                if(name.value.search(nameStr) == 0 && tel.value.search(telStr) == 0 && mail.value.search(mailStr) == 0) {
+                    alert("Письмо отправлено!");
+                    location.reload();   
+                }
+            });
+            function error(item, label, type) {
+                type.classList.add("error");
+                let errorBlock = document.createElement("p");
+                let labelBlock = document.querySelector(label);
+                errorBlock.className = "errorText";
+                errorBlock.textContent = item;
+                labelBlock.appendChild(errorBlock);
+            }
+        }   
+    </script>   
+</body>
+</html>
