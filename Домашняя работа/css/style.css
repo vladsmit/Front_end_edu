@@ -89,6 +89,27 @@ body {
     width: 300px;
 }
 
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-title, .cart-price, .cart-quantity {
+    font-size: 14px;
+}
+
+.del-btn {
+    border: none;
+    outline: none;
+    background-image: url(../img/delete.png);
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
 .invisible {
     display: none;    
 }

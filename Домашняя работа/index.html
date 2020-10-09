@@ -11,27 +11,19 @@
         <header class="main-header">
             <a class="logo-link" href="index.html"><img src="img/logo.png" alt="logo" width="153" height="72"></a>
             <div class="cartWrap">
-                <form action="#" class="searchForm">
-                    <input class="input-search" type="text" v-model="searchLine">
-                    <button class="btn-search" type="button" @click="filterGoods()"></button>
-                </form>
+                <search></search>
                 <button class="btn-cart" type="button"><img src="img/basket.png" alt="Корзина" width="30" height="30" @click="isVisibleCart=!isVisibleCart"></button>
-                <div class="cartBlock" v-if="isVisibleCart"></div>
+                <cart :visible="isVisibleCart" :img="imgCart" :cart-items="cartItems" @remove-product="removeProduct"></cart>
             </div>
         </header>
         <main class="main-block">
-            <div class="products">
-                <p class="empty" v-if="filtered.length < 1">{{emptyList}}</p>
-                <div class="product-item" v-for="product of filtered" :key="product.id_product">
-                    <img class="product-image" :src="imgCatalog" alt="Some img">
-                    <h3 class="product-title">{{product.product_name}}</h3>
-                    <p class="product-price">{{product.price}} $</p>
-                    <button class="buy-btn" @click="addProduct(product)">Купить</button>
-                </div>
-            </div>
+            <products :products="filtered" :img="imgCatalog" :empty="emptyList" @add-product="addProduct"></products>
         </main>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/cartComponent.js"></script>
+    <script src="js/productComponent.js"></script>
+    <script src="js/searchComponent.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
