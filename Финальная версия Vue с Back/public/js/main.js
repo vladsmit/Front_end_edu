@@ -1,0 +1,120 @@
+const app = new Vue(
+    {
+        el: "#app",
+        data: {
+            products: [],
+            filtered: [],
+            cartItems: [],
+            searchLine: ""
+        },
+        components: {cart, products, search, error},
+        methods: {
+            getJson(url){
+                return fetch(url)
+                    .then(result => result.json())
+                    .catch(error => {
+                        this.$refs.error.text = error;
+                    })
+            },
+            postJson(url, data){
+                return fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                })
+                    .then(result => result.json())
+                    .catch(error => {
+                        this.$refs.error.text = error;
+                    })
+            },
+            putJson(url, data){
+                return fetch(url, {
+                    method: 'PUT',
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                })
+                    .then(result => result.json())
+                    .catch(error => {
+                        this.$refs.error.text = error;
+                    })
+            },
+            
+            addProduct(item){
+                let find = this.cartItems.find(el => el.id_product === item.id_product);
+                if(find){
+                    this.putJson(`/api/cart/${find.id_product}`, {quantity: 1})
+                        .then(data => {
+                            if(data.result === 1){
+                                find.quantity++
+                            }
+                        })
+                } else {
+                    const prod = Object.assign({quantity: 1}, item);
+                    this.postJson(`/api/cart`, prod)
+                        .then(data => {
+                            if(data.result === 1){
+                                this.cartItems.push(prod)
+                            }
+                        })
+                }
+            },
+            
+            removeProduct(item) {
+                if(item.quantity > 1) {
+                    item.quantity--;
+                }
+                else {
+                    this.$data.cartItems.splice(this.cartItems.indexOf(item), 1);
+                }
+            },
+            
+            filterGoods(value) {
+                const regexp = new RegExp(value, 'i');
+                this.filtered = this.products.filter(product => regexp.test(product.product_name));
+            }
+        },
+        mounted(){
+            this.getJson(`/api/products`)
+                .then(data => {
+                    for (let item of data){
+                        this.$data.products.push(item);
+                        this.$data.filtered.push(item);
+                    }
+                }),
+            this.getJson(`/api/cart`)
+                .then(data => {
+                    for (let item of data){
+                        this.$data.cartItems.push(item);
+                    }
+                })
+        }
+    }
+);
+
+import cartComp from "./cartComponent.js";
+import productsComp from "./productsComponent.js";
+import searchComp from "./searchComponent.js";
+import errorComp from "./errorComponent.js";
+
+const cartItem = cartComp.components.cartItem;
+const cart = cartComp.cart;
+const product = productsComp.components.product;
+const products = productsComp.products;
+const search = searchComp.search;
+const error = errorComp.error;
+
+export default {
+    components: {
+        cartItem : cartItem,
+        cart : cart,
+        product : product,
+        products : products,
+        search : search,
+        error : error
+    },
+    app : app
+}
