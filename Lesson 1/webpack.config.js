@@ -11,6 +11,7 @@ module.exports = {
         filename: 'app.js',
         publicPath: '/dist/build/',
     },
+    devtool: 'source-map',
     module: {
         rules: [
             {
@@ -19,9 +20,13 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 options: {
-                    presets: ['@babel/env', '@babel/react'],
+                    presets: ['@babel/env', '@babel/react']
                 }
             },
-        ],
+            {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader']
+            }
+        ]
     },
 };

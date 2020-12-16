@@ -1,0 +1,12 @@
+.msgField {
+    width: 100px;
+    min-height: 50px;
+    background-color:lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.form {
+    border: 2px solid black;
+    width: 100px;
+}
