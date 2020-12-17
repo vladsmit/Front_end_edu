@@ -14,20 +14,24 @@ export default class MessageField extends React.Component {
 
     componentDidUpdate() {
         if(this.state.messages.length % 2 === 1) {
-            setTimeout(() => {
+            this.timeout = setTimeout(() => {
                 this.setState({ messages: [...this.state.messages, {text: 'Спасибо за ответ!', name: 'Робот'}] });
             }, 1000);
         }
     };
 
+    componentWillUnmount() {
+        clearTimeout(this.timeout);
+    }
+
     render() {
         const msgElements = this.state.messages.map((message, i) => <Message key={i} text={message.text} name={message.name}/>)
         return <div className="msgField">
             {msgElements}
-            <div className="inputBlock">
+            <form className="inputBlock" onSubmit={e => e.preventDefault()}>
                 <input className="inputElement" type="text" />
-                <button className="sendBtn" onClick={ this.handleClick }>Отправить</button>
-            </div>
+                <input className="sendBtn" type="submit" value="Отправить" onClick={ this.handleClick } />
+            </form>
         </div>
     }
 }
