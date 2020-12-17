@@ -7,7 +7,6 @@ export default class Message extends React.Component {
     }
     
     render() {
-        //const status = this.props.order ? 'Робот' : 'Влад';
         return <div className = "textField">
             <p className="nameTitle">{ this.props.name }</p>
             <p className="msgText">{ this.props.text }</p>
