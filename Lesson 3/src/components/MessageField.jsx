@@ -1,15 +1,12 @@
 import React from 'react';
 import Message from './Message';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import InputGroup from 'react-bootstrap/InputGroup';
+import Input from './Input';
 
 export default class MessageField extends React.Component {
     state = {
         messages: [{text: 'Привет', name: 'Робот'}, {text: 'Как дела?', name: 'Робот'}],
         inputValue: '',
     };
-    inputType = React.createRef();
 
     handleClick = (e) => {
         e.preventDefault();
@@ -20,10 +17,6 @@ export default class MessageField extends React.Component {
     handleValue = (event) => {
         this.setState({ inputValue: event.target.value });
     };
-
-    componentDidMount() {
-        this.inputType.current.focus();
-    }
 
     componentDidUpdate() {
         if(this.state.messages.length % 2 === 1 && this.state.inputValue === '') {
@@ -43,16 +36,7 @@ export default class MessageField extends React.Component {
             <div className="msgField">
                 {msgElements}
             </div>
-            <div className="inputWrap">
-                <Form onSubmit={this.handleClick}>
-                    <InputGroup className="mb-3">
-                        <Form.Control ref={ this.inputType } type="text" value={this.state.inputValue} onChange={this.handleValue} />
-                        <InputGroup.Append>
-                            <Button variant="dark" type="submit">Отправить</Button>
-                        </InputGroup.Append>
-                    </InputGroup>
-                </Form>
-            </div>
+            <Input onChange={this.handleValue} value={this.state.inputValue} onClick={this.handleClick}/>
         </div>
     }
 }
