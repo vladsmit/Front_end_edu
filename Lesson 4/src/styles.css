@@ -1,0 +1,113 @@
+.wrapper {
+    margin: 0 auto;
+    padding: 0;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightgray;
+    border: 2px solid lightslategrey;
+    border-radius: 5px;
+}
+
+.header {
+    width: 100%;
+    min-height: 50px;
+    padding: 0 225px 0 25px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid lightslategrey;
+    border-radius: 5px;
+}
+
+.header__chatName {
+    font-size: 22px;
+}
+
+.chatList {
+    width: 30%;
+    border-right: 2px solid lightslategrey;
+}
+
+.msgFieldWrap {
+    width: 70%;
+}
+
+.inputWrap {
+    padding: 0 5px;
+}
+
+.msgField {
+    width: 100%;
+    min-height: 197px;
+    margin: 0 0 18px;
+    padding: 20px 15px 10px;
+    background-color: lightslategray;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.textField {
+    width: 60%;
+    min-height: 20px;
+    margin: 5px;
+    padding: 5px;
+    background-color: cornsilk;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.4);
+}
+
+.nameTitle {
+    color: #b94d22;
+    margin: 0;
+}
+
+.msgText {
+    margin: 2px 0;
+}
+
+.profileLink:hover {
+    text-decoration: none;
+}
+
+.chatList__link:hover {
+    text-decoration: none;
+}
+
+.profileWrapper {
+    margin: 0 auto;
+    padding: 10px;
+    width: 500px;
+    display: flex;
+    background-color: lightslategray;
+    border-radius: 5px;
+}
+
+.profileImg {
+    align-self: flex-end;
+}
+
+.profileInfoBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+.profileInfo {
+    margin: 5px 30px;
+}
+
+.profileButton {
+    width: 147px;
+    margin: 11px 0 0 30px;
+}
+
+.profileLogo:hover {
+    opacity: 0.6;
+}
+
+.createButton {
+    margin: 65px 14px 15px;
+}
