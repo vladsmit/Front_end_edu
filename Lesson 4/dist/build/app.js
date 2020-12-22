@@ -656,8 +656,6 @@ var Layout = /*#__PURE__*/function (_React$Component) {
           messageList: []
         }))
       });
-
-      console.log(chats);
     };
 
     return _this;
@@ -1019,9 +1017,19 @@ var Router = /*#__PURE__*/function (_React$Component) {
   var _super = _createSuper(Router);
 
   function Router() {
+    var _this;
+
     _classCallCheck(this, Router);
 
-    return _super.apply(this, arguments);
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+    _this.state = {
+      regexp: /[0-9]+/
+    };
+    return _this;
   }
 
   _createClass(Router, [{
@@ -1030,13 +1038,24 @@ var Router = /*#__PURE__*/function (_React$Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Route, {
         exact: true,
         path: "/",
-        component: _Layout__WEBPACK_IMPORTED_MODULE_1__.default
+        render: function render() {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Redirect, {
+            to: "/chat/1"
+          });
+        }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Route, {
         exact: true,
         path: "/chat/:chatId/",
         render: function render(obj) {
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layout__WEBPACK_IMPORTED_MODULE_1__.default, {
             chatId: Number(obj.match.params.chatId)
+          });
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Route, {
+        path: "'/chat/".concat(this.state.regexp, "/'"),
+        render: function render() {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Redirect, {
+            to: "/chat/1"
           });
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Route, {
