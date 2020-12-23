@@ -1,0 +1,19 @@
+.textField {
+    width: 60%;
+    min-height: 20px;
+    margin: 5px;
+    padding: 5px;
+    background-color: cornsilk;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.4);
+}
+
+.nameTitle {
+    color: #b94d22;
+    margin: 0;
+}
+
+.msgText {
+    margin: 2px 0;
+}
