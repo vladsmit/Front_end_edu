@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 const Message = (props) => {
 
     const propTypes = {
-        text: PropTypes.string.isRequired,
         message: PropTypes.object.isRequired
     };
 
