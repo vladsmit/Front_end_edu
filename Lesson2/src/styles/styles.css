@@ -1,0 +1,71 @@
+body {
+    margin: 0 auto;
+    width: 400px;
+}
+
+.msgField {
+    width: 100%;
+    margin: 0;
+    padding: 20px 15px 10px;
+    background-color: lightslategray;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.textField {
+    width: 60%;
+    min-height: 20px;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: cornsilk;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.4);
+}
+
+.textField:hover .deleteMsgBtn {
+    display: block;
+}
+
+.nameTitle {
+    color: #b94d22;
+    margin: 0;
+    width: 80%;
+}
+
+.msgText {
+    margin: 2px 0;
+    width: 100%;
+}
+
+.inputForm {
+    margin-top: 10px;
+}
+
+.inputMsg {
+    border-radius: 5px;
+    border: none;
+    min-height: 25px;
+    width: 70%;
+    margin: 5px;
+}
+
+.sendBtn {
+    border-radius: 5px;
+    border: none;
+    height: 27px;
+    background-color: lemonchiffon;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.sendBtn:hover {
+    background-color: lightcoral;
+}
+
+.sendBtn:active {
+    background-color: lemonchiffon;
+}
