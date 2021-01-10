@@ -10,7 +10,7 @@ const MessageField = (props) => {
     let messageElement = messages.map((message, i) => <Message key={i} message={ message } />);
 
     const addMessage = (event) => {
-        setMessages(['Привет', 'Как дела?', 'Нормально']);
+        setMessages([...messages, 'Нормально']);
     };
 
     return (
