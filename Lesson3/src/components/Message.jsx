@@ -1,0 +1,18 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const Message = (props) => {
+
+    const propTypes = {
+        message: PropTypes.object.isRequired
+    };
+
+    return (
+        <div className="textField" style={{alignSelf: props.message.sender === 'Влад' ? 'flex-end' : 'flex-start'}}>
+            <p className="nameTitle">{ props.message.sender }</p>
+            <p className="msgText">{ props.message.text }</p>
+        </div>
+    );
+};
+
+export default Message;

@@ -1,0 +1,131 @@
+.wrapper {
+    margin: 0 auto;
+    padding: 0;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightgray;
+    border: 2px solid lightslategrey;
+    border-radius: 5px;
+}
+
+.header {
+    width: 100%;
+    min-height: 50px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid lightslategrey;
+    border-radius: 5px;
+}
+
+.header__chatName {
+    font-size: 22px;
+}
+
+.chatList {
+    width: 30%;
+    border-right: 2px solid lightslategrey;
+    box-sizing: border-box;
+}
+
+.chatItem {
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    border-bottom: 2px solid lightslategrey;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+}
+
+.chatItem:hover {
+    background-color: gray;
+}
+
+.chatItem:active {
+    background-color: lightgray;
+}
+
+.msgFieldWrap {
+    width: 70%;
+}
+
+.msgField {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-top: 15px;
+    background-color: lightslategray;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.textField {
+    box-sizing: border-box;
+    width: 60%;
+    min-height: 20px;
+    margin: 5px 10px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: cornsilk;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.4);
+}
+
+.textField:hover .deleteMsgBtn {
+    display: block;
+}
+
+.nameTitle {
+    color: #b94d22;
+    margin: 0;
+    width: 80%;
+}
+
+.msgText {
+    margin: 2px 0;
+    width: 100%;
+}
+
+.inputForm {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin-top: 15px;
+    padding: 0 10px;
+    background-color: lightgray;
+}
+
+.inputMsg {
+    border-radius: 5px;
+    border: none;
+    min-height: 25px;
+    width: 70%;
+    margin-right: 5px;
+}
+
+.sendBtn {
+    border-radius: 5px;
+    border: none;
+    height: 27px;
+    background-color: lemonchiffon;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sendBtn:hover {
+    background-color: lightcoral;
+}
+
+.sendBtn:active {
+    background-color: lemonchiffon;
+}
