@@ -1,0 +1,218 @@
+.wrapper {
+    margin: 0 auto;
+    padding: 0;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightgray;
+    border: 2px solid lightslategrey;
+    border-radius: 5px;
+}
+
+.header {
+    width: 100%;
+    min-height: 50px;
+    padding: 0 225px 0 25px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid lightslategrey;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.header__chatName {
+    font-size: 22px;
+}
+
+.chatList {
+    width: 30%;
+    min-height: 275px;
+    padding-bottom: 12px;
+    border-right: 2px solid lightslategrey;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chatItem {
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    border-bottom: 2px solid lightslategrey;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+}
+
+.chatItem:hover {
+    background-color: gray;
+}
+
+.chatItem:active {
+    background-color: lightgray;
+}
+
+.createChatForm {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chatTitleInput {
+    border-radius: 5px;
+    border: none;
+    min-height: 25px;
+    width: 80%;
+    margin-bottom: 5px;
+}
+
+.msgFieldWrap {
+    width: 70%;
+}
+
+.msgField {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 233px;
+    margin: 0;
+    padding: 15px 0;
+    background-color: lightslategray;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.textField {
+    box-sizing: border-box;
+    width: 60%;
+    min-height: 20px;
+    margin: 5px 10px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: cornsilk;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.4);
+}
+
+.textField:hover .deleteMsgBtn {
+    display: block;
+}
+
+.nameTitle {
+    color: #b94d22;
+    margin: 0;
+    width: 80%;
+}
+
+.msgText {
+    margin: 2px 0;
+    width: 100%;
+}
+
+.inputForm {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 10px;
+    background-color: lightgray;
+}
+
+.inputMsg {
+    border-radius: 5px;
+    border: none;
+    min-height: 25px;
+    width: 70%;
+    margin-right: 5px;
+}
+
+.sendBtn {
+    border-radius: 5px;
+    border: none;
+    height: 27px;
+    background-color: lemonchiffon;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sendBtn:hover {
+    background-color: lightcoral;
+}
+
+.sendBtn:active {
+    background-color: lemonchiffon;
+}
+
+.error-wrapper {
+    margin: 0 auto;
+    padding: 0;
+    width: 500px;
+    min-height: 205px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+    border: 2px solid lightslategrey;
+    border-radius: 5px;
+}
+
+.errorMessage {
+    font-size: 22px;
+}
+
+.profileWrapper {
+    margin: 0 auto;
+    padding: 10px;
+    width: 500px;
+    display: flex;
+    background-color: lightslategray;
+    border-radius: 5px;
+}
+
+.profileImg {
+    align-self: flex-end;
+}
+
+.profileInfoBlock {
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
+}
+
+.profileInfo {
+    margin: 5px 0;
+}
+
+.profileButton {
+    width: 147px;
+    margin: 11px 0 0 30px;
+}
+
+.profileLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+
+}
+
+.profileLink:hover {
+    opacity: 0.6;
+    color: #000;
+}
+
+.profileMargin {
+    margin-top: 40px;
+}
