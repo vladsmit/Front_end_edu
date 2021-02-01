@@ -1,0 +1,53 @@
+.textField {
+  width: 60%;
+  min-height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: cornsilk;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.4);
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+.textField--margin {
+  margin: 5px 10px;
+}
+
+.textField:hover .textField__deleteBtn {
+  display: block;
+}
+
+.textField__nameTitle {
+  width: 80%;
+  color: #b94d22;
+  margin: 0;
+}
+
+.textField__msgText {
+  width: 100%;
+  margin: 2px 0;
+}
+
+.textField__deleteBtn {
+  width: 18px;
+  height: 18px;
+  display: none;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  font: 600 14px 'Arial', sans-serif;
+  text-transform: uppercase;
+  background-color: red;
+  padding: 0;
+}
+
+.textField__deleteBtn--margin {
+  margin-left: 22px;
+}
