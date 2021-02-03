@@ -1,0 +1,30 @@
+.chatBlock__createForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chatBlock__createForm--margin {
+  margin-top: 12px;
+}
+
+.chatBlock__createForm__titleInput {
+  width: 80%;
+  min-height: 25px;
+  border-radius: 5px;
+  border: none;
+}
+
+.chatBlock__createForm__titleInput--margin {
+  margin-bottom: 5px;
+}

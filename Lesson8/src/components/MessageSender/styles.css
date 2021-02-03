@@ -1,0 +1,44 @@
+.msgSender__form {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: lightgray;
+  padding: 0 10px;
+}
+
+.msgSender__input {
+  width: 70%;
+  min-height: 25px;
+  border-radius: 5px;
+  border: none;
+}
+
+.msgSender__input--margin {
+  margin-right: 5px;
+}
+
+.sendBtn {
+  height: 27px;
+  background-color: cornsilk;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  -webkit-box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  -webkit-transition: ease-out 300ms all;
+  transition: ease-out 300ms all;
+}
+
+.sendBtn:hover {
+  background-color: lightslategrey;
+  color: cornsilk;
+}
+
+.sendBtn:active {
+  background-color: cornsilk;
+}
